@@ -1,5 +1,5 @@
-# WSysMon
-A windows task manager clone for Linux.
+# WSysMon rethought version
+A windows task manager clone for Linux. MacOS Version deleted
 
 <img src="screenshots/scr0.png" style="max-width: 70%; height: auto;">
 <img src="screenshots/scr1.png" style="max-width: 70%; height: auto;">

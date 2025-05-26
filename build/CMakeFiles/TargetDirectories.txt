@@ -1,0 +1,3 @@
+/home/jdteufel/Escritorio/Guinpin/Guinpin/build/CMakeFiles/WSysMon.dir
+/home/jdteufel/Escritorio/Guinpin/Guinpin/build/CMakeFiles/edit_cache.dir
+/home/jdteufel/Escritorio/Guinpin/Guinpin/build/CMakeFiles/rebuild_cache.dir

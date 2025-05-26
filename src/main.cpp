@@ -1,4 +1,4 @@
-#include <gtkmm/application.h>
+#include <gtkmm.h>
 #include "ui/MainWindow.h"
 #include "utils/linux/X11Utils.h"
 

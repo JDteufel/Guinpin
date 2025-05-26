@@ -3,9 +3,13 @@
 #include "../../../api/SystemInfoApi.h"
 #include "../../../utils/UnitConverter.h"
 #include "../../../storage/AppSettings.h"
+#include "../../../api/process/ProcessManager.h"
+#include <gtkmm/messagedialog.h>
+#include <glibmm/ustring.h>
+#include "../../MainWindow.h"
 
 PerformanceRAMView::PerformanceRAMView(MainWindow *window, PerformanceButton *button)
-    : PerformanceSubView(window, button, new GraphWidget(0, 100, 60)) {
+    : PerformanceSubView(window, button, new GraphWidget(0, 100, 60)), m_AlertShown(false) {
     Gdk::RGBA ramColor;
     ramColor.set_rgba(137 / 256., 97 / 256., 153 / 256., 1.);
     button->GetGraph()->SetAxisColor(ramColor);
@@ -47,6 +51,46 @@ PerformanceRAMView::PerformanceRAMView(MainWindow *window, PerformanceButton *bu
 
             m_UsageGraph->AddPoint(ramUsagePercent);
             m_Button->AddGraphPoint(ramUsagePercent);
+
+            // Verifica y muestra alerta si corresponde
+            CheckAndShowHighMemoryProcessAlert();
     });
     m_UpdateThread->Start();
+}
+
+void PerformanceRAMView::CheckAndShowHighMemoryProcessAlert() {
+    auto totalRam = SystemInfoApi::GetTotalRam();
+    if(totalRam <= 0) return;
+
+    auto processes = ProcessManager::GetAllProcesses();
+    ProcessNode* highProc = nullptr;
+    for(auto* proc : processes) {
+        if(proc->GetRAMUsage() > 0.7 * totalRam) {
+            highProc = proc;
+            break;
+        }
+    }
+    if(highProc && !m_AlertShown) {
+        auto unit = UnitType::AUTO;
+        if(AppSettings::Get().useIECUnits)
+            unit = UnitType::AUTO_I;
+        std::string msg = "¡Alerta!\nEl proceso siguiente está usando más del 70% de la RAM:\n";
+        msg += "PID: " + std::to_string(highProc->GetPid()) + "\n";
+        msg += "Nombre: " + highProc->GetName() + "\n";
+        msg += "Memoria: " + UnitConverter::ConvertBytesString(highProc->GetRAMUsage(), unit) + " / " +
+               UnitConverter::ConvertBytesString(totalRam, unit);
+
+        Gtk::MessageDialog dialog(
+            *static_cast<Gtk::Window*>(m_Window),
+            Glib::ustring(msg),
+            false,
+            Gtk::MESSAGE_WARNING,
+            Gtk::BUTTONS_OK,
+            true
+        );
+        dialog.run();
+        m_AlertShown = true;
+    }
+    if(!highProc)
+        m_AlertShown = false;
 }

@@ -1532,4 +1532,30 @@ CMakeFiles/WSysMon.dir/src/ui/views/performance/PerformanceRAMView.cpp.o: \
  /home/jdteufel/Escritorio/Guinpin/Guinpin/src/ui/views/performance/../../../api/../utils/Utils.h \
  /home/jdteufel/Escritorio/Guinpin/Guinpin/src/ui/views/performance/../../../utils/UnitConverter.h \
  /home/jdteufel/Escritorio/Guinpin/Guinpin/src/ui/views/performance/../../../storage/AppSettings.h \
- /home/jdteufel/Escritorio/Guinpin/Guinpin/src/ui/views/performance/../../../storage/../utils/Utils.h
+ /home/jdteufel/Escritorio/Guinpin/Guinpin/src/ui/views/performance/../../../storage/../utils/Utils.h \
+ /home/jdteufel/Escritorio/Guinpin/Guinpin/src/ui/views/performance/../../../api/process/ProcessManager.h \
+ /home/jdteufel/Escritorio/Guinpin/Guinpin/src/ui/views/performance/../../../api/process/ProcessNode.h \
+ /home/jdteufel/Escritorio/Guinpin/Guinpin/src/ui/views/performance/../../../api/process/../ProcessesApi.h \
+ /home/jdteufel/Escritorio/Guinpin/Guinpin/src/ui/views/performance/../../../api/process/../../utils/IOUtils.h \
+ /home/jdteufel/Escritorio/Guinpin/Guinpin/src/ui/views/performance/../../../api/process/../SystemInfoApi.h \
+ /home/jdteufel/Escritorio/Guinpin/Guinpin/src/ui/views/performance/../../../api/process/../GPUApi.h \
+ /home/jdteufel/Escritorio/Guinpin/Guinpin/src/ui/views/performance/../../../api/process/../../utils/Utils.h \
+ /home/jdteufel/Escritorio/Guinpin/Guinpin/src/ui/views/performance/../../../api/process/../linux/gpu/NvGpuApi.h \
+ /home/jdteufel/Escritorio/Guinpin/Guinpin/src/ui/views/performance/../../../api/process/../linux/gpu/nvml.h \
+ /home/jdteufel/Escritorio/Guinpin/Guinpin/src/ui/views/performance/../../../api/process/../linux/gpu/nvml_hook_funcs.inl \
+ /home/jdteufel/Escritorio/Guinpin/Guinpin/src/ui/views/performance/../../../api/process/../linux/gpu/DrmGpuApi.h \
+ /home/jdteufel/Escritorio/Guinpin/Guinpin/src/ui/views/performance/../../../api/process/../linux/gpu/../../../utils/Utils.h \
+ /home/jdteufel/Escritorio/Guinpin/Guinpin/src/ui/views/performance/../../MainWindow.h \
+ /home/jdteufel/Escritorio/Guinpin/Guinpin/src/ui/views/performance/../../views/ProcessesView.h \
+ /home/jdteufel/Escritorio/Guinpin/Guinpin/src/ui/views/performance/../../views/../../api/process/ProcessNode.h \
+ /home/jdteufel/Escritorio/Guinpin/Guinpin/src/ui/views/performance/../../views/../../utils/DispatcherThread.h \
+ /home/jdteufel/Escritorio/Guinpin/Guinpin/src/ui/views/performance/../../views/../DetailsWindow.h \
+ /home/jdteufel/Escritorio/Guinpin/Guinpin/src/ui/views/performance/../../views/View.h \
+ /home/jdteufel/Escritorio/Guinpin/Guinpin/src/ui/views/performance/../../views/PerformanceView.h \
+ /home/jdteufel/Escritorio/Guinpin/Guinpin/src/ui/views/performance/../../views/../widgets/PerformanceButton.h \
+ /home/jdteufel/Escritorio/Guinpin/Guinpin/src/ui/views/performance/../../views/performance/PerformanceCPUView.h \
+ /home/jdteufel/Escritorio/Guinpin/Guinpin/src/ui/views/performance/../../views/performance/PerformanceSubView.h \
+ /home/jdteufel/Escritorio/Guinpin/Guinpin/src/ui/views/performance/../../views/performance/PerformanceRAMView.h \
+ /home/jdteufel/Escritorio/Guinpin/Guinpin/src/ui/views/performance/../../views/performance/PerformanceGPUView.h \
+ /home/jdteufel/Escritorio/Guinpin/Guinpin/src/ui/views/performance/../../views/AutostartView.h \
+ /home/jdteufel/Escritorio/Guinpin/Guinpin/src/ui/views/performance/../../views/ServicesView.h

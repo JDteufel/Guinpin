@@ -28,11 +28,11 @@ public:
     static ProcessNode *GetTreeProcessByPid(int pid);
 
     static void KillByPid(int pid, bool force = false);
+    static std::vector<ProcessNode *> GetAllProcesses();
 private:
     static std::vector<ProcessNode *> GetProcessesByCategory(int categoryId);
     static std::vector<ProcessNode *> GetProcessesByFilter(const std::function<bool(ProcessNode *)>& filterFunc, bool withChildren = true);
     static std::vector<ProcessNode *> GetAppProcessesByFilter(const std::function<bool(ProcessNode *)>& filterFunc, bool withChildren = true);
-    static std::vector<ProcessNode *> GetAllProcesses();
 
     static double GetCPUUsageForProc(const ProcessInfo& proc, CPUTimes cpuTimes);
     static void UpdateCPUTimeForProc(const ProcessInfo& proc, CPUTimes cpuTimes);
